@@ -1,0 +1,135 @@
+% Homework.sty
+% Style file for Adrian Clark Keister
+% Last updated for all most convenient commands used in physics and mathematics 8/11/2003
+
+% Packages for Inclusion
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{amsfonts}
+\usepackage{srcltx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{chemarr}
+\usepackage[mathscr]{eucal}
+\usepackage{newtxtext}
+\usepackage[uprightGreek]{newtxmath}
+\usepackage{bm}
+
+% Initialize certain width and heighth parameters
+\setlength{\textwidth}{7.in}
+\setlength{\textheight}{9.5in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\topmargin}{-.5in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+
+% Personalized commands.
+\newcommand{\del}{\Vec{\nabla }}			% The del operator
+\newcommand{\extr}{\overline{\mathbb{R}}}	% The extended real numbers
+\newcommand{\real}{\mathbb{R}}				% The real numbers.
+\newcommand{\range}{\mathcal{R}}			% Range of a function.
+\newcommand{\domain}{\mathcal{D}}			% Domain of a function.
+\newcommand{\complex}{\mathbb{C}}			% The complex numbers.
+\newcommand{\Res}{\text{Res}}				% Residue for complex analysis
+\newcommand{\eps}{\varepsilon}				% Better epsilon
+\newcommand{\Ra}{\:\Rightarrow\:}			% Forward implies
+\newcommand{\La}{\:\Leftarrow\:}			% Reverse implies
+\renewcommand{\and}{\;\&\;}					% And symbol for Suppes.
+\newcommand{\ra}{\rightarrow}				% A right arrow
+\newcommand{\la}{\leftarrow}					% A left arrow
+\newcommand{\pa}{\partial}					% Partial derivative operator. Saves time.
+\newcommand{\eqmod}[2]{ \equiv #1 \x{ (mod }#2\x{)}}
+\newcommand{\sgn}{\text{sgn}}				% Signum function
+\renewcommand{\Cap}{\text{cap}}				% Capacity of a graph
+\newcommand{\x}[1]{\text{#1}}
+\newcommand{\un}[1]{\text{\,#1}}				% Units
+\newcommand{\val}{\text{val}}				% Value of a flow in a network
+\newcommand{\supp}{\text{supp}}				% The support of an operator or function or measure
+\newcommand{\codim}{\text{codim}}			% The co-dimension of a subspace.
+\newcommand{\ip}[2]{\langle #1 , #2 \rangle}	% Inner product of two vectors in mathematics
+\newcommand{\Ip}[2]{\langle #1 |#2 \rangle}	% Inner product of two vectors in quantum mechanics
+\newcommand{\tf}[2]{\times\frac{#1}{#2}}		% Times the fraction.
+\newcommand{\degf}{^{\circ}\x{F}}
+\newcommand{\degc}{^{\circ}\x{C}}
+\newcommand{\degk}{\x{K}}
+\newcommand{\amu}{\un{amu}}				% atomic mass units
+\newcommand{\se}{\Bumpeq}					% stiochiometrically equivalent.
+\newcommand{\To}{\longrightarrow}			% chemical reaction arrow
+\newcommand{\tot}[2]{\xrightleftharpoons[\text{#2}]{\text{#1}}}
+											% Bidirectional chemical reaction arrows
+\newcommand{\totno}{\xrightleftharpoons[\text{}]{\text{}}}
+\newcommand{\too}{\quad\Rightarrow\quad}	% IoP style implies.
+\newcommand{\water}{\x{H}_{2}\x{O}}		% chemical formula for water
+\newcommand{\NA}{N_{\x{A}}\un{units/mol}}    % Avogadro's Number with units
+\newcommand{\na}{N_{\x{A}}}                               % Avogadro's Number without units
+\newcommand{\aq}{\x{(\emph{aq})}}			% aqueous modifier in chemical equations.
+\newcommand{\solid}{\x{(\emph{s})}}			% solid modifier in chemical equations
+\newcommand{\gas}{\x{(\emph{g})}}			% gaseous modifer in chemical equations
+\newcommand{\liquid}{\x{(\emph{l})}}			% liquid modifier in chemical equations
+\newcommand{\bron}{\x{Br{\o}nsted }}			% Bronsted, as in, Bronsted acid or base.
+\newcommand{\ox}[2]{\overset{#2}{\x{#1}}}	% Usage: \ox{oxidation number}{element}
+\newcommand{\ul}[1]{\x{\underline{#1}}}		% Underline. Usage: \ul{underlined material}.
+\renewcommand{\iff}{\leftrightarrow}			% The if and only if symbol, made shorter
+\newcommand{\Iff}{\Leftrightarrow}				% The if and only if symbol with double horizontal lines.
+\newcommand{\Log}{\text{Log}}				% The logarithm
+\newcommand{\Arg}{\text{Arg}}				% The principal argument	
+\newcommand{\Ker}{\text{Ker}}					% The kernel of an operator
+\newcommand{\R}{\mathcal{R}}					% Range of an operator
+\newcommand{\D}{\mathcal{D}}					% Domain of an operator
+\newcommand{\E}[1]{\times 10^{#1}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\csch}{\text{csch}}
+\newcommand{\tr}{\text{tr}}
+\renewcommand{\Im}{\text{Im}}
+\renewcommand{\Re}{\text{Re}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\interior}{\text{int}}
+\newcommand{\const}{\text{constant}}
+\newcommand{\be}{\begin{enumerate}[{\bf (a)}]}
+\newcommand{\ee}{\end{enumerate}}
+
+% Generic Problem heading for Homework
+\newcommand{\Prob}[1]{
+
+\begin{center}
+-------------------------------------------------------------------------------------------------
+\end{center}
+
+\noindent \textbf{Problem #1. }}
+
+% Generic problem answer heading for homework
+\newcommand{\Ans}{
+
+---
+
+\noindent\textbf{Answer. }}
+
+% Several commands to be renewed.
+\renewcommand{\Vec}[1]{\textbf{#1}}			% Bolding a vector
+\renewcommand{\ll}{<\!\!<}					% _really_ less than
+\renewcommand{\gg}{>\!\!>}					% _really_ greater than
+
+\newcommand{\initials}
+{ 
+
+\hfill {\bf Student Initials:} \underline{\makebox[0.5in][1]{ACK}}  
+$\qquad$ {\bf Parent Initials:} \underline{\makebox[0.5in][1]{ACK}}
+
+}
+\renewcommand{\vec}[1]
+{\overset{\to}{\textbf{#1}}}
+
+
+
+
+
+\newcommand{\ihat}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jhat}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\khat}{\boldsymbol{\hat{\textbf{k}}}}
+\newcommand{\sn}[2]{\E{#1}\un{#2}}
+\newcommand{\tfpow}[3]
+{\times\left(\frac{#1}{#2}\right)^{\!\!#3}}
