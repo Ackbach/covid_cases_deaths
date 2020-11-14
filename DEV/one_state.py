@@ -114,8 +114,6 @@ def analyze_state(state: str) -> list:
 
 states_df = pd.DataFrame(columns=['state', 'max_corr', 'delay'])
 i = 0
-for state in states:
-    states_df.loc[i] = analyze_state(state)
-    i += 1
+analyze_state('CA')
 
 debug_print(states_df, 'All states')
